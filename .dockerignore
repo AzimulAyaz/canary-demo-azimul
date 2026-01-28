@@ -1,0 +1,21 @@
+# Build artifacts
+target/
+*.jar
+
+# Git
+.git
+.gitignore
+
+# IDEs
+.idea/
+.vscode/
+*.iml
+*.iws
+*.ipr
+
+# Maven wrapper (Optional: since you COPY . ., you can keep it or let Docker download it)
+# .mvn/
+
+# Metadata/Logs
+HELP.md
+*.log
