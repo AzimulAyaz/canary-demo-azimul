@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: canary-demo-v2
+spec:
+  replicas: 1  # 25% traffic (3 Pods V1 + 1 Pod V2)
+  selector:
+    matchLabels:
+      app: canary-demo
+      version: v2
+  template:
+    metadata:
+      labels:
+        app: canary-demo
+        version: v2
+    spec:
+      containers:
+        - name: canary-demo
+          image: docker.io/azimulayaz/canary-demo:app-v2
+          ports:
+            - containerPort: 8080

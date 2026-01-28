@@ -15,5 +15,10 @@ public class AuthController {
         return ResponseEntity.ok(loginInfo);
     }
 
+    @GetMapping("/logout")
+    public ResponseEntity<String> logout(){
+        String loginInfo = "User Successfully Logged Out!!";
+        return ResponseEntity.ok(loginInfo);
+    }
 
 }
