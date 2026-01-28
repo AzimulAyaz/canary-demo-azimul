@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: canary-demo-v2
 spec:
-  replicas: 2  # 50% traffic (3 Pods V1 + 1 Pod V2)
+  replicas: 3  # 75% traffic (3 Pods V2 + 1 Pod V1)
   selector:
     matchLabels:
       app: canary-demo
