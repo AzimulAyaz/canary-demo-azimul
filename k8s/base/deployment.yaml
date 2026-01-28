@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: canary-demo-v1
+  name: canary-demo-app
 spec:
   replicas: 2
   selector:
     matchLabels:
       app: canary-demo
-      version: v1
+      version: v2
   template:
     metadata:
       labels:
         app: canary-demo
-        version: v1
+        version: v2
     spec:
       containers:
         - name: canary-demo
-          image: docker.io/azimulayaz/canary-demo:app-v1
+          image: docker.io/azimulayaz/canary-demo:app-v2
           ports:
             - containerPort: 8080
